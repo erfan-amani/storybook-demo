@@ -2,12 +2,12 @@ type Size = "small" | "large";
 
 interface ButtonType {
   title: string;
-  size: Size;
+  size?: Size;
   isActive?: boolean;
   disabled?: boolean;
 }
 
-const getSizeClasses = (size: Size) => {
+const getSizeClasses = (size?: Size) => {
   switch (size) {
     case "small": {
       return "px-4 py-2.5 font text-sm";
