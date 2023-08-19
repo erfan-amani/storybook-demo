@@ -1,7 +1,7 @@
 import Button from "./Button";
 
 type FiltersProp = {
-  active: "all" | "completed" | "uncompleted";
+  active?: "all" | "completed" | "uncompleted";
 };
 
 const Filters = ({ active = "all" }: FiltersProp) => {
