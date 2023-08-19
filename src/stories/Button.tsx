@@ -10,7 +10,7 @@ interface ButtonType {
 const getSizeClasses = (size?: Size) => {
   switch (size) {
     case "small": {
-      return "px-4 py-2.5 font text-sm";
+      return "px-3 py-1 font text-sm";
     }
     case "large": {
       return "px-6 py-3 text-lg";
