@@ -6,7 +6,7 @@ type FiltersProp = {
 
 const Filters = ({ active = "all" }: FiltersProp) => {
   return (
-    <div className="flex gap-2 items-center">
+    <div className="flex gap-2 items-center justify-center">
       <Button title="All" isActive={active === "all"} />
       <Button title="Completed" isActive={active === "completed"} />
       <Button title="Uncompleted" isActive={active === "uncompleted"} />
