@@ -1,14 +1,18 @@
 import { TrashIcon, CheckIcon } from "@heroicons/react/24/outline";
 
-interface TodoItemsType {
-  size: "small" | "medium" | "large";
+interface TodoItemType {
+  size?: "small" | "medium" | "large";
   title: string;
-  done: boolean;
+  done?: boolean;
 }
 
-const TodoItems = ({ title, done }: TodoItemsType) => {
+const TodoItem = ({ title, done = false }: TodoItemType) => {
   return (
-    <div className="flex items-center justify-between gap-2 py-3 px-4 shadow-sm border rounded-2xl">
+    <div
+      className={`flex items-center justify-between gap-2 py-3 px-4 shadow-sm border rounded-2xl bg-white w-full ${
+        done ? "opacity-50" : ""
+      }`}
+    >
       <div className="flex items-center gap-2">
         <button className="h-4 w-4 rounded-md border border-gray-800 flex items-center justify-center">
           {done && <CheckIcon className="w-6 h-6" />}
@@ -29,4 +33,4 @@ const TodoItems = ({ title, done }: TodoItemsType) => {
   );
 };
 
-export default TodoItems;
+export default TodoItem;
