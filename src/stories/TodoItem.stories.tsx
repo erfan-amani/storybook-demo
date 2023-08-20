@@ -3,6 +3,13 @@ import TodoItem from "./TodoItem";
 
 const meta: Meta<typeof TodoItem> = {
   component: TodoItem,
+  decorators: [
+    (Story) => (
+      <div className="w-[400px]">
+        <Story />
+      </div>
+    ),
+  ],
 };
 export default meta;
 

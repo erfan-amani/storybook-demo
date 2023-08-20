@@ -6,7 +6,7 @@ interface TodoItemsType {
   done: boolean;
 }
 
-const TodoItems = ({ size, title, done }: TodoItemsType) => {
+const TodoItems = ({ title, done }: TodoItemsType) => {
   return (
     <div className="flex items-center justify-between gap-2 py-3 px-4 shadow-sm border rounded-2xl">
       <div className="flex items-center gap-2">
@@ -14,7 +14,12 @@ const TodoItems = ({ size, title, done }: TodoItemsType) => {
           {done && <CheckIcon className="w-6 h-6" />}
         </button>
 
-        <p>{title}</p>
+        <div className="relative">
+          {done && (
+            <div className="w-full h-[2px] absolute top-1/2 -translate-y-1/2 bg-gray-600" />
+          )}
+          <p>{title}</p>
+        </div>
       </div>
 
       <button>
