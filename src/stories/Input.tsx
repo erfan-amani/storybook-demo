@@ -2,14 +2,16 @@ import Button from "./Button";
 
 interface InputProps {
   button?: string;
+  placeholder: string;
 }
 
-const Input = ({ button }: InputProps) => {
+const Input = ({ button, placeholder }: InputProps) => {
   return (
-    <div className="relative w-fit">
+    <div className="relative rounded-2xl border bg-white overflow-hidden">
       <input
+        placeholder={placeholder}
         type="text"
-        className="rounded-2xl border py-2.5 px-4 focus-visible:outline-none"
+        className="w-full py-2.5 px-4 focus-visible:outline-none"
       />
 
       {button && (
