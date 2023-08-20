@@ -18,6 +18,6 @@ type Story = StoryObj<typeof TodoItem>;
 export const Small: Story = {
   args: {
     title: "Todo title",
-    done: false,
+    completed: false,
   },
 };
